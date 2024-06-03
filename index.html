@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 2em;
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+        }
+        input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Pet</h1>
+    <form action="/submitPet">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="type">Type:</label>
+        <select name="type" id="type">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="rat">Rat</option>
+            <option value="hamster">Hamster</option>
+            <option value="iguana">Iguana</option>
+        </select>
+
+        <label for="owner">Owner:</label>
+        <input type="text" id="owner" name="owner">
+
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Search Pet</h1>
+    <form action="/searchPet">
+        <label for="searchName">Name:</label>
+        <input type="text" id="searchName" name="name">
+        <input type="submit" value="Search">
+    </form>
+</body>
+<script>
+    console.log('Home page loaded');
+</script>
+</html>
